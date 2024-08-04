@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to E-Commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('https://www.shopkick.com/wp-content/uploads/2020/03/shutterstock_641814046.jpg.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .welcome {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+
+        .welcome h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .welcome button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeIn 2s ease-in 1s;
+        }
+
+        .welcome button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <div>
+            <h1>Welcome to Our E-Commerce Site</h1>
+            <button onclick="window.location.href='login.html'">Enter</button>
+        </div>
+    </div>
+</body>
+</html>

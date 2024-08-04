@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - Ecommerce Site</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="background-image">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Accessories</h2>
+            <div class="product">
+                <img src="images/watch.jpg" alt="Watch">
+                <h3>Watch</h3>
+                <p>Price: $50</p>
+                <p>Description: A stylish watch.</p>
+                <p>Reviews: 4.8 stars</p>
+                <button onclick="buyProduct()">Buy Now</button>
+                <button onclick="addToCart('Watch', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/belt.jpg" alt="Belt">
+                <h3>Belt</h3>
+                <p>Price: $15</p>
+                <p>Description: A durable belt.</p>
+                <p>Reviews: 4.2 stars</p>
+                <button onclick="buyProduct()">Buy Now</button>
+                <button onclick="addToCart('Belt', 15)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/sunglasses.jpg" alt="Sunglasses">
+                <h3>Sunglasses</h3>
+                <p>Price: $30</p>
+                <p>Description: Stylish sunglasses for sunny days.</p>
+                <p>Reviews: 4.5 stars</p>
+                <button onclick="buyProduct()">Buy Now</button>
+                <button onclick="addToCart('Sunglasses', 30)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/hat.jpg" alt="Hat">
+                <h3>Hat</h3>
+                <p>Price: $20</p>
+                <p>Description: A fashionable hat.</p>
+                <p>Reviews: 4.4 stars</p>
+                <button onclick="buyProduct()">Buy Now</button>
+                <button onclick="addToCart('Hat', 20)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/scarf.jpg" alt="Scarf">
+                <h3>Scarf</h3>
+                <p>Price: $25</p>
+                <p>Description: Warm and cozy scarf.</p>
+                <p>Reviews: 4.6 stars</p>
+                <button onclick="buyProduct()">Buy Now</button>
+                <button onclick="addToCart('Scarf', 25)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/gloves.jpg" alt="Gloves">
+                <h3>Gloves</h3>
+                <p>Price: $18</p>
+                <p>Description: High-quality winter gloves.</p>
+                <p>Reviews: 4.7 stars</p>
+                <button onclick="buyProduct()">Buy Now</button>
+                <button onclick="addToCart('Gloves', 18)">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        function buyProduct() {
+            window.location.href = 'address.html';
+        }
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + ' has been added to your cart.');
+        }
+    </script>
+</body>
+</html>

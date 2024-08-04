@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Ecommerce Site</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="payment">
+            <h2>Payment Details</h2>
+            <form id="payment-form">
+                <label for="card-name">Name on Card:</label>
+                <input type="text" id="card-name" name="card-name" required>
+                
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+                
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <button type="submit">Pay Now</button>
+            </form>
+            
+            <h3>Or Pay Using</h3>
+            <div class="alternative-payment">
+                <button id="cod">Cash on Delivery</button>
+                <button id="phonepe"><img src= C:\p2.html\images\phonepe.jpg alt="PhonePe"></button>
+                <button id="gpay"><img src=C:\p2.html\images\gpay.jpg  alt="GPay"></button>
+                <button id="paytm"><img src= C:\p2.html\images\paytm.jpg alt="Paytm"></button>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Payment successful!');
+            window.location.href = 'order.html';
+        });
+
+        document.getElementById('cod').addEventListener('click', function() {
+            alert('Cash on Delivery selected!');
+            window.location.href = 'order.html';
+        });
+
+        document.getElementById('phonepe').addEventListener('click', function() {
+            alert('PhonePe payment selected!');
+            window.location.href = 'order.html';
+        });
+
+        document.getElementById('gpay').addEventListener('click', function() {
+            alert('GPay payment selected!');
+            window.location.href = 'order.html';
+        });
+
+        document.getElementById('paytm').addEventListener('click', function() {
+            alert('Paytm payment selected!');
+            window.location.href = 'order.html';
+        });
+    </script>
+</body>
+</html>
